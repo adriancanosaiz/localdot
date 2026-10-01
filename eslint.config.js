@@ -44,6 +44,11 @@ export default tseslint.config(
       ],
       // Numbers in template literals are common in log and label strings and are always safe.
       '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
+      // Omitting a key via rest destructuring is idiomatic; underscore marks intentionally unused bindings.
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { ignoreRestSiblings: true, argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+      ],
       '@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
     },
   },
@@ -60,14 +65,6 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs['core-web-vitals'].rules,
-    },
-  },
-
-  {
-    files: ['**/*.test.ts'],
-    rules: {
-      // Tests assert on deliberately loose shapes parsed from unknown input.
-      '@typescript-eslint/no-non-null-assertion': 'off',
     },
   },
 
