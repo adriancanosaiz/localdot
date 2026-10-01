@@ -1,0 +1,85 @@
+# --- Internal working material (local only, never committed) ---
+.claude/
+/openspec/
+/IMPLEMENTATION_PLAN.md
+/DESIGN_DIRECTION.md
+.localdot/
+
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+id_rsa*
+id_ed25519*
+id_ecdsa*
+*.keychain
+*.keychain-db
+.npmrc.local
+
+# --- Local data ---
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# --- Browser automation ---
+browser-profile/
+browser-profiles/
+.playwright/
+playwright-report/
+playwright/.cache/
+test-results/
+blob-report/
+*.har
+cookies.json
+
+# --- Dependencies ---
+node_modules/
+.pnpm-store/
+
+# --- Build output ---
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+next-env.d.ts
+.turbo/
+.vercel/
+
+# --- Tests ---
+coverage/
+
+# --- Logs ---
+*.log
+logs/
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- OS / editors ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*.swo
+*~
