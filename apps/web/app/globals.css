@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens. Dark ("Carbon") is the default identity; light ("Paper") is opt-in via
+ * data-theme="light". Sodium is reserved for moments that need the human: approvals, focus, Stop.
+ */
+:root {
+  --carbon: #0d0c0a;
+  --bone: #ece5d8;
+  --ash-1: #a39d92;
+  --ash-2: #6d685f;
+  --ash-3: #2a2824;
+  --sodium: #ff8a1f;
+  --oxide: #d2553a;
+  --paper: #f1ede4;
+  --ink: #1a1815;
+
+  --surface: var(--carbon);
+  --foreground: var(--bone);
+  --muted: var(--ash-1);
+  --subtle: var(--ash-2);
+  --hairline: var(--ash-3);
+  --accent: var(--sodium);
+  --danger: var(--oxide);
+  --dot: var(--bone);
+
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  --surface: var(--paper);
+  --foreground: var(--ink);
+  --muted: #5c574e;
+  --subtle: #8a847a;
+  --hairline: #d9d3c7;
+  --accent: #c25e00;
+  --danger: #a83a22;
+  --dot: var(--ink);
+
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-hairline: var(--hairline);
+  --color-accent: var(--accent);
+  --color-danger: var(--danger);
+  --color-dot: var(--dot);
+
+  --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+html,
+body {
+  background: var(--surface);
+  color: var(--foreground);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
