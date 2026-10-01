@@ -1,0 +1,17 @@
+{
+  "name": "@localdot/shared",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Core contracts shared by the Localdot agent runtime, providers, tools and UI.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "zod": "4.6.5"
+  }
+}
